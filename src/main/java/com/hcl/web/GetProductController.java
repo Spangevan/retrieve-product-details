@@ -8,18 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 
 
 public class GetProductController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-   
-    public GetProductController() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
+	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		int id = Integer.parseInt(request.getParameter("id"));
+		
+		
+		
 	}
 
 	
