@@ -24,7 +24,7 @@ public class GetProductController extends HttpServlet {
 		
 		request.setAttribute("product", p1);
 		
-		if (id <= 6 && id >=1) {
+		if (p1.getDetails() != null) {
 		
 		RequestDispatcher rd = request.getRequestDispatcher("showDetails.jsp");
 		rd.forward(request, response);
