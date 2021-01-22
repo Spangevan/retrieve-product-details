@@ -24,8 +24,16 @@ public class GetProductController extends HttpServlet {
 		
 		request.setAttribute("product", p1);
 		
+		if (id <= 6 && id >=1) {
+		
 		RequestDispatcher rd = request.getRequestDispatcher("showDetails.jsp");
 		rd.forward(request, response);
+		}
+		else {
+			RequestDispatcher rd = request.getRequestDispatcher("error.jsp");
+			rd.forward(request, response);
+
+		}
 		
 	}
 

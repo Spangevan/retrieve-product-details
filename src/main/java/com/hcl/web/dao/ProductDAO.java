@@ -16,9 +16,12 @@ public class ProductDAO {
 		try {
 			
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3302/products","root","root");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/products","root","root");
 			Statement st = conn.createStatement();
 			ResultSet rs = st.executeQuery("select * from product_details where id =" + id);
+			
+			
+			
 			if(rs.next()) {
 				p.setId(rs.getInt("id"));
 				p.setName(rs.getString("name"));

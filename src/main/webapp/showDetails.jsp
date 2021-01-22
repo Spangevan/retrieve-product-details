@@ -1,4 +1,5 @@
 <%@page import="com.hcl.web.model.Product"%>
+<%@ page errorPage="error.jsp" %>  
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -9,6 +10,8 @@
 </head>
 <body>
 
+<h2>Success! Here is the product info that you have searched for</h2>
+
 <%
 	Product p1 = (Product)request.getAttribute("product");
 
@@ -16,6 +19,8 @@
 
 
 %>
+
+
 
 </body>
 </html>
