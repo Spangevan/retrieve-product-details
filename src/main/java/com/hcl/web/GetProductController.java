@@ -2,6 +2,7 @@ package com.hcl.web;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +20,12 @@ public class GetProductController extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		ProductDAO dao = new ProductDAO();
 		Product p1 = dao.getDetails(id);
+		
+		
+		request.setAttribute("product", p1);
+		
+		RequestDispatcher rd = request.getRequestDispatcher("showDetails.jsp");
+		rd.forward(request, response);
 		
 	}
 
